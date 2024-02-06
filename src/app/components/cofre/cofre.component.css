@@ -1,0 +1,38 @@
+.circle {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center; 
+}
+
+.active {
+    background-color: green;
+}
+
+.inactive {
+    background-color: red;
+}
+
+.td-circle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.status{
+    margin-left: 4px;
+}
+
+.header-client{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.green-box{
+    color:white;
+    margin-left: 12.5%;
+    width: 75%;
+    background-color: #10C4B6;
+}
