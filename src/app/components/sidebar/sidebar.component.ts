@@ -9,15 +9,15 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/tickets', title: 'Tickets', icon: "confirmation_number", class: ''},
+    { path: '/#', title: 'Tickets', icon: "confirmation_number", class: ''},
     { path: '/clientes', title: 'Clientes', icon: "group", class: ''},
-    { path: '/recursos', title: 'Recursos',  icon:'devices', class: '' },
-    { path: '/contratos', title: 'Contratos',  icon:'article', class: '' },
-    { path: '/relatorios', title: 'Relatórios',  icon:'analytics', class: '' },
-    { path: '/agenda', title: 'Agenda',  icon:'event_note', class: '' },
-    { path: '/conhecimentos', title: 'Conhecimentos',  icon:'library_books', class: '' },
-    { path: '/cofre', title: 'Cofre de senhas',  icon:'lock', class: '' },
-    { path: '/configuracoes', title: 'Configurações',  icon:'settings', class: '' },
+    { path: '/#', title: 'Recursos',  icon:'devices', class: '' },
+    { path: '/#', title: 'Contratos',  icon:'article', class: '' },
+    { path: '/#', title: 'Relatórios',  icon:'analytics', class: '' },
+    { path: '/#', title: 'Agenda',  icon:'event_note', class: '' },
+    { path: '/#', title: 'Conhecimentos',  icon:'library_books', class: '' },
+    { path: '/#', title: 'Cofre de senhas',  icon:'lock', class: '' },
+    { path: '/#', title: 'Configurações',  icon:'settings', class: '' },
     { path: '/clienteNovo', title: 'Cliente Novo', icon:'person', class: ''},
 ];
 

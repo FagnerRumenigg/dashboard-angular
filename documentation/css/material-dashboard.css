@@ -1834,7 +1834,7 @@ pre {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-lg > .table-bordered {
-      border: 0; } }
+    border: 0; } }
 
 @media (max-width: 1199.98px) {
   .table-responsive-xl {

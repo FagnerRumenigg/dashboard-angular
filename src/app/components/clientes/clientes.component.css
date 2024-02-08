@@ -15,9 +15,7 @@
 }
 
 .td-circle{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: table-cell;
 }
 
 .status{
@@ -88,7 +86,7 @@ th{
     color:#262626;
 }
 .td-nome{
-    width: 90%;
+    width: 85%;
 }
 
 .td-icons{
@@ -133,4 +131,8 @@ th{
 ::placeholder {
     color: #BFBFBF;
     opacity: 1; /* Firefox */
+}
+
+.grid-color{
+    background-color: #FAFAFA;
 }
