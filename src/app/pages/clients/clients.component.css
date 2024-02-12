@@ -1,0 +1,23 @@
+.a-client-test {
+  color: rgb(89, 89, 89);
+}
+
+.more-clients-button {
+  margin-left: 16px;
+}
+
+.count-header-tag {
+  color: rgb(12, 196, 182);
+  background: rgba(12, 196, 182, 0.1);
+  border-color: rgba(12, 196, 182, 0.1);
+  border-radius: 25px;
+  margin-left: 10px;
+  position: relative;
+  top: -1px;
+  padding: 1px 9px;
+}
+
+.actions-btn {
+  display: flex;
+  justify-content: flex-end;
+}

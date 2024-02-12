@@ -15,39 +15,57 @@
       </div>
       <ul class="sider-menu-ul" nz-menu nzTheme="dark" nzMode="inline">
         <a nz-menu-item class="li-sider-menu" (selectstart)="true" routerLink="v" routerLinkActive="active" ariaCurrentWhenActive="page">
-          <span nz-icon nzType="file"></span>
+          <span nz-icon>
+            <i class="material-icons">dashboard</i>
+          </span>
           <span>Dashboard</span>
         </a>
-        <a nz-menu-item class="li-sider-menu" routerLink="v/clients/new" routerLinkActive="active" ariaCurrentWhenActive="page">
-          <span nz-icon nzType="lock" nzTheme="fill"></span>
+        <a nz-menu-item class="li-sider-menu">
+          <span nz-icon>
+            <i class="material-icons">confirmation_number</i>
+          </span>
           <span>Tickets</span>
         </a>
         <a nz-menu-item class="li-sider-menu" routerLink="v/clients" routerLinkActive="active" ariaCurrentWhenActive="page">
-          <span nz-icon nzType="setting"></span>
+          <span nz-icon>
+            <i class="material-icons">group</i>
+          </span>
           <span>Clients</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
-          <span nz-icon nzType="file"></span>
-          <span>File</span>
+          <span nz-icon>
+            <i class="material-icons">devices</i>
+          </span>
+          <span>Recursos</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
-          <span nz-icon nzType="lock" nzTheme="fill"></span>
-          <span>Cofre de senhas</span>
+          <span nz-icon>
+            <i class="material-icons">article</i>
+          </span>
+          <span>Contratos</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
-          <span nz-icon nzType="setting"></span>
-          <span>Configurações</span>
+          <span nz-icon>
+            <i class="material-icons">analytics</i>
+          </span>
+          <span>Relatórios</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
-          <span nz-icon nzType="file"></span>
-          <span>File</span>
+          <span nz-icon>
+            <i class="material-icons">event_note</i>
+          </span>
+          <span>Agenda</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
-          <span nz-icon nzType="setting"></span>
-          <span>Configurações</span>
+          <span nz-icon>
+            <i class="material-icons">library_books</i>
+          </span>
+          <span>Conhecimentos</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
-          <span nz-icon nzType="lock" nzTheme="fill"></span>
+          <span nz-icon>
+            <i class="material-icons">lock</i>
+          </span>
           <span>Cofre de senhas</span>
         </a>
         <a nz-menu-item class="li-sider-menu">
@@ -75,8 +93,25 @@
         <nz-tab nzTitle="Tab 3"></nz-tab>
       </nz-tabset> -->
       <div class="header-index-left">
-        <div class="tab-menu">
-          {{ tabName }}
+        <div class="tab-menu tab-1" [class]="[tabNameOne ? 'show-div' : 'hidden-div']" [class.active-tab]="activeRoute === tabNameOne">
+          <div (click)="navigateTo('/v', tabNameOne)">
+            {{ tabNameOne }}
+          </div>
+          <div (click)="closeTabAndNavigateTo('1', '/v/clients', tabNameTwo)" class="close-button" [class]="[tabNameTwo ? 'show-div' : 'hidden-div']">
+            <span nz-icon>
+              <i class="material-icons">close</i>
+            </span>
+          </div>
+        </div>
+        <div class="tab-menu tab-2" [class]="[tabNameTwo ? 'show-div' : 'hidden-div']" [class.active-tab]="activeRoute === tabNameTwo">
+          <div (click)="navigateTo('/v/clients', tabNameTwo)">
+            {{ tabNameTwo }}
+          </div>
+          <div (click)="closeTabAndNavigateTo('2', '/v', tabNameOne)" class="close-button" [class]="[tabNameOne ? 'show-div' : 'hidden-div']">
+            <span nz-icon>
+              <i class="material-icons">close</i>
+            </span>
+          </div>
         </div>
       </div>
         <div class="header-index-right">

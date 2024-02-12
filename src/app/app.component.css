@@ -103,10 +103,6 @@ nz-footer {
   color: #0cc4b6
 }
 
-.ant-btn-primary {
-  border-color: #0EC4B6;
-  background: #0EC4B6;
-}
 
 .ant-btn-primary:hover {
   background: #2ed1be;
@@ -145,21 +141,52 @@ nz-footer {
 }
 
 .header-index-left {
+  display: flex;
   height: 48px;
   align-self: flex-end;
 }
 
 .tab-menu {
   height: 32px;
-  background: #F1F2F5;
   margin-top: 16px;
   text-align: center;
   display: flex;
   padding: 0 20px;
   align-items: center;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border: none;
+  border-top: 0.5px solid #F0F0F0;
+  border-right: 0.5px solid #F0F0F0;
+  border-left: 0.5px solid #F0F0F0;
   cursor: pointer;
+}
+
+.inactive-tab {
+  background: #FFF;
+}
+
+.active-tab {
+  background: #F1F2F5;
+}
+
+.tab-2 {
+  margin-left: 8px;
+}
+
+.show-div {
+  display: flex;
+}
+
+.hidden-div {
+  display: none;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 4px;
 }
 
 .search-field {
@@ -179,4 +206,8 @@ nz-footer {
 
 .header-index-right .header-index-action:hover {
   background: rgba(0,0,0,.025);
+}
+
+.material-icons{
+  font-size: 16px;
 }
