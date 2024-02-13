@@ -16,3 +16,9 @@
 .grafico-um {
   padding: 16px 24px;
 }
+
+@media (max-width: 600px) {
+  .content {
+    display: none;
+  }
+}

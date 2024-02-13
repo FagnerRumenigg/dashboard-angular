@@ -1,111 +1,341 @@
 <div class="inner-content">
-<div class="site-layout-content-background normal">
-  <div class="ant-page-header site-page-header has-breadcrumb has-footer ant-page-header-ghost">
-  <div class="ant-breadcrumb"><span><span class="ant-breadcrumb-link"><a [routerLink]="['/v/clients']" routerLinkActive="active" ariaCurrentWhenActive="page">Clientes</a></span><span class="ant-breadcrumb-separator">/</span></span><span><span class="ant-breadcrumb-link" style="color: black;">Novo cliente</span></span></div>
-<div class="ant-page-header-heading">
-  <div class="ant-page-header-heading-left"><span class="ant-page-header-heading-title" title="Novo cliente">Novo cliente</span></div><span class="ant-page-header-heading-extra"></span></div>
-<div class="ant-page-header-footer">
-  <div class="ant-steps ant-steps-horizontal ant-steps-small ant-steps-label-horizontal" style="margin-bottom: 20px;">
-  <div class="ant-steps-item ant-steps-item-process ant-steps-item-active">
-  <div role="button" tabindex="0" class="ant-steps-item-container">
-  <div class="ant-steps-item-tail"></div>
-<div class="ant-steps-item-icon"><span class="ant-steps-icon">1</span></div>
-<div class="ant-steps-item-content">
-  <div class="ant-steps-item-title">Informações</div></div></div></div>
-<div class="ant-steps-item ant-steps-item-wait ant-steps-item-disabled">
-  <div class="ant-steps-item-container">
-  <div class="ant-steps-item-tail"></div>
-<div class="ant-steps-item-icon"><span class="ant-steps-icon">2</span></div>
-<div class="ant-steps-item-content">
-  <div class="ant-steps-item-title">Relacionamentos</div></div></div></div>
-<div class="ant-steps-item ant-steps-item-wait ant-steps-item-disabled">
-  <div class="ant-steps-item-container">
-  <div class="ant-steps-item-tail"></div>
-<div class="ant-steps-item-icon"><span class="ant-steps-icon">3</span></div>
-<div class="ant-steps-item-content">
-  <div class="ant-steps-item-title">Próximos passos</div></div></div></div></div>
-<div><form class="ant-form ant-form-vertical">
-  <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 0px;">
-  <div class="ant-col ant-col-xs-24 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-row ant-form-item" style="row-gap: 0px;">
-  <div class="ant-col ant-form-item-label"><label for="client_name" class="ant-form-item-required" title="Nome fantasia">Nome fantasia</label></div>
-  <div class="ant-col ant-form-item-control">
-  <div class="ant-form-item-control-input">
-  <div class="ant-form-item-control-input-content"><input type="text" id="client_name" class="ant-input" value=""></div></div></div></div></div>
-  <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-row ant-form-item" style="row-gap: 0px;">
-  <div class="ant-col ant-form-item-label"><label for="client_social" class="ant-form-item-required" title="Razão social">Razão social</label></div>
-  <div class="ant-col ant-form-item-control">
-  <div class="ant-form-item-control-input">
-  <div class="ant-form-item-control-input-content"><input type="text" id="client_social" class="ant-input" value=""></div></div></div></div></div>
-  <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-row ant-form-item" style="row-gap: 0px;">
-  <div class="ant-col ant-form-item-label"><label for="client_social_revenue" class="" title="CPF/CNPJ">CPF/CNPJ</label></div>
-  <div class="ant-col ant-form-item-control">
-  <div class="ant-form-item-control-input">
-  <div class="ant-form-item-control-input-content"><input maxlength="18" type="text" id="client_social_revenue" class="ant-input" value=""></div></div></div></div></div></div>
-  <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 0px;">
-  <div class="ant-col ant-col-xs-24 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-row ant-form-item" style="row-gap: 0px;">
-  <div class="ant-col ant-form-item-label"><label for="client_municipal_registration" class="" title="Inscrição municipal">Inscrição municipal</label></div>
-  <div class="ant-col ant-form-item-control">
-  <div class="ant-form-item-control-input">
-  <div class="ant-form-item-control-input-content"><input type="text" id="client_municipal_registration" class="ant-input" value=""></div></div></div></div></div>
-  <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-row ant-form-item" style="row-gap: 0px;">
-  <div class="ant-col ant-form-item-label"><label for="client_estadual_registration" class="" title="Inscrição estadual">Inscrição estadual</label></div>
-  <div class="ant-col ant-form-item-control">
-  <div class="ant-form-item-control-input">
-  <div class="ant-form-item-control-input-content"><input type="text" id="client_estadual_registration" class="ant-input" value=""></div></div></div></div></div>
-  <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-row ant-form-item ant-form-item-has-success" style="row-gap: 0px;">
-  <div class="ant-col ant-form-item-label"><label for="client_quarterly_billing" class="" title="Faturamento quarteirizado">Faturamento quarteirizado</label></div>
-  <div class="fields-size">
-    <label class="switch">
-      <input type="checkbox" id="toggleSwitch">
-      <span class="slider round"></span>
-    </label>
+  <div class="site-layout-content-background normal">
+    <div class="ant-page-header site-page-header has-breadcrumb has-footer ant-page-header-ghost">
+      <div class="ant-breadcrumb"><span><span class="ant-breadcrumb-link"><a [routerLink]="['/v/clients']"
+              routerLinkActive="active" ariaCurrentWhenActive="page">Clientes</a></span><span
+            class="ant-breadcrumb-separator">/</span></span><span><span class="ant-breadcrumb-link"
+            style="color: black;">Novo cliente</span></span></div>
+      <div class="ant-page-header-heading">
+        <div class="ant-page-header-heading-left"><span class="ant-page-header-heading-title" title="Novo cliente">Novo
+            cliente</span></div><span class="ant-page-header-heading-extra"></span>
+      </div>
+      <div>
+        <div>
+          <div class="ant-steps-item ant-steps-item-process ant-steps-item-active">
+            <div role="button" tabindex="0" class="ant-steps-item-container mb-2">
+              <div class="ant-steps-item-tail"></div>
+              <div class="ant-steps-item-icon"><span class="ant-steps-icon">1</span></div>
+              <div class="ant-steps-item-content">
+                <div class="ant-steps-item-title">Informações</div>
+              </div>
+            </div>
+          </div>
+          <div class="ant-steps-item ant-steps-item-wait ant-steps-item-disabled">
+            <div class="ant-steps-item-container mb-2">
+              <div class="ant-steps-item-tail"></div>
+              <div class="ant-steps-item-icon"><span class="ant-steps-icon">2</span></div>
+              <div class="ant-steps-item-content">
+                <div class="ant-steps-item-title">Relacionamentos</div>
+              </div>
+            </div>
+          </div>
+          <div class="ant-steps-item ant-steps-item-wait ant-steps-item-disabled">
+            <div class="ant-steps-item-container mb-2">
+              <div class="ant-steps-item-tail"></div>
+              <div class="ant-steps-item-icon"><span class="ant-steps-icon">3</span></div>
+              <div class="ant-steps-item-content">
+                <div class="ant-steps-item-title">Próximos passos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="ant-form ant-form-vertical">
+            <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 0px;">
+              <div class="ant-col ant-col-xs-24 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+                <div class="ant-row ant-form-item" style="row-gap: 0px;">
+                  <div class="ant-col ant-form-item-label"><label for="client_name" class="ant-form-item-required"
+                      title="Nome fantasia">Nome fantasia</label></div>
+                  <div class="ant-col ant-form-item-control">
+                    <div class="ant-form-item-control-input">
+                      <div class="ant-form-item-control-input-content"><input type="text" id="client_name"
+                          class="ant-input" value=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+                <div class="ant-row ant-form-item" style="row-gap: 0px;">
+                  <div class="ant-col ant-form-item-label"><label for="client_social" class="ant-form-item-required"
+                      title="Razão social">Razão social</label></div>
+                  <div class="ant-col ant-form-item-control">
+                    <div class="ant-form-item-control-input">
+                      <div class="ant-form-item-control-input-content"><input type="text" id="client_social"
+                          class="ant-input" value=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+                <div class="ant-row ant-form-item" style="row-gap: 0px;">
+                  <div class="ant-col ant-form-item-label"><label for="client_social_revenue" class=""
+                      title="CPF/CNPJ">CPF/CNPJ</label></div>
+                  <div class="ant-col ant-form-item-control">
+                    <div class="ant-form-item-control-input">
+                      <div class="ant-form-item-control-input-content"><input maxlength="18" type="text"
+                          id="client_social_revenue" class="ant-input" value=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 0px;">
+              <div class="ant-col ant-col-xs-24 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+                <div class="ant-row ant-form-item" style="row-gap: 0px;">
+                  <div class="ant-col ant-form-item-label"><label for="client_municipal_registration" class=""
+                      title="Inscrição municipal">Inscrição municipal</label></div>
+                  <div class="ant-col ant-form-item-control">
+                    <div class="ant-form-item-control-input">
+                      <div class="ant-form-item-control-input-content"><input type="text"
+                          id="client_municipal_registration" class="ant-input" value=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+                <div class="ant-row ant-form-item" style="row-gap: 0px;">
+                  <div class="ant-col ant-form-item-label"><label for="client_estadual_registration" class=""
+                      title="Inscrição estadual">Inscrição estadual</label></div>
+                  <div class="ant-col ant-form-item-control">
+                    <div class="ant-form-item-control-input">
+                      <div class="ant-form-item-control-input-content"><input type="text"
+                          id="client_estadual_registration" class="ant-input" value=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ant-col ant-col-xs-12 ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+                <div class="ant-row ant-form-item ant-form-item-has-success" style="row-gap: 0px;">
+                  <div class="ant-col ant-form-item-label"><label for="client_quarterly_billing" class=""
+                      title="Faturamento quarteirizado">Faturamento quarteirizado</label></div>
+                  <div class="fields-size">
+                    <label class="switch">
+                      <input type="checkbox" id="toggleSwitch">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 30px;">
+            <div class="ant-col ant-col-md-24" style="padding-left: 8px; padding-right: 8px;">
+              <div class="ant-table-wrapper">
+                <div class="ant-spin-nested-loading">
+                  <div class="ant-spin-container">
+                    <div class="ant-table ant-table-small ant-table-empty">
+                      <div class="ant-table-title">
+                        <div class="ant-row ant-row-space-around"
+                          style="margin-left: -6px; margin-right: -6px; padding-top: 10px; padding-right: 10px; padding-left: 10px; row-gap: 0px;">
+                          <div class="ant-col ant-col-md-12" style="padding-left: 6px; padding-right: 6px;">
+                            <span>Endereços</span></div>
+                          <div class="ant-col ant-col-md-12"
+                            style="padding-left: 6px; padding-right: 6px; text-align: right;"><button type="button"
+                              class="ant-btn ant-btn-primary"><span role="img" class="anticon"><svg
+                                  xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em"
+                                  fill="currentColor">
+                                  <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                  <path
+                                    d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+                                    stroke="currentColor"></path>
+                                </svg></span><span>Endereço</span></button></div>
+                        </div>
+                      </div>
+                      <div class="ant-table-container">
+                        <div class="ant-table-content">
+                          <table style="table-layout: auto; font-size: 12px;">
+                            <colgroup>
+                              <col style="width: 10%;">
+                              <col style="width: 30%;">
+                              <col style="width: 20%;">
+                              <col style="width: 10%;">
+                              <col style="width: 10%;">
+                              <col style="width: 20%;">
+                            </colgroup>
+                            <thead class="">
+                              <tr>
+                                <th class="ant-table-cell">CEP</th>
+                                <th class="ant-table-cell">Logradouro</th>
+                                <th class="ant-table-cell">Bairro</th>
+                                <th class="ant-table-cell">Cidade</th>
+                                <th class="ant-table-cell">Estado</th>
+                                <th class="ant-table-cell">Complemento</th>
+                              </tr>
+                            </thead>
+                            <tbody class="ant-table-tbody">
+                              <tr class="ant-table-placeholder">
+                                <td colspan="6" class="ant-table-cell">
+                                  <div class="ant-empty ant-empty-normal">
+                                    <div class="ant-empty-image"><svg class="ant-empty-img-simple" width="64"
+                                        height="41  " viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg">
+                                        <g transform="translate(0 1)" fill="none" fill-rule="evenodd">
+                                          <ellipse class="ant-empty-img-simple-ellipse" cx="32" cy="33" rx="32" ry="7">
+                                          </ellipse>
+                                          <g class="ant-empty-img-simple-g" fill-rule="nonzero">
+                                            <path
+                                              d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z">
+                                            </path>
+                                            <path
+                                              d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z"
+                                              class="ant-empty-img-simple-path"></path>
+                                          </g>
+                                        </g>
+                                      </svg></div>
+                                    <div class="ant-empty-description">Não há dados</div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ant-col ant-col-md-24" style="padding-left: 8px; padding-right: 8px; margin-bottom: 30px;">
+              <div class="ant-table-wrapper">
+                <div class="ant-spin-nested-loading">
+                  <div class="ant-spin-container">
+                    <div class="ant-table ant-table-small ant-table-empty">
+                      <div class="ant-table-title">
+                        <div class="ant-row ant-row-space-around"
+                          style="padding-top: 10px; padding-right: 10px; padding-left: 10px; row-gap: 0px;">
+                          <div class="ant-col ant-col-md-12"><span>Contatos</span></div>
+                          <div class="ant-col ant-col-md-12" style="text-align: right;"><button type="button"
+                              class="ant-btn ant-btn-primary"><span role="img" class="anticon"><svg
+                                  xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em"
+                                  fill="currentColor">
+                                  <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                  <path
+                                    d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+                                    stroke="currentColor"></path>
+                                </svg></span><span>Contato</span></button></div>
+                        </div>
+                      </div>
+                      <div class="ant-table-container">
+                        <div class="ant-table-content">
+                          <table style= "font-size: 12px;">
+                            <colgroup>
+                              <col style="width: 20%;">
+                              <col style="width: 20%;">
+                              <col style="width: 20%;">
+                              <col style="width: 40%;">
+                            </colgroup>
+                            <thead class="">
+                              <tr>
+                                <th class="ant-table-cell">Nome</th>
+                                <th class="ant-table-cell">E-mail</th>
+                                <th class="ant-table-cell">Telefone</th>
+                                <th class="ant-table-cell">Tipo de contato</th>
+                              </tr>
+                            </thead>
+                            <tbody class="ant-table-tbody">
+                              <tr class="ant-table-placeholder">
+                                <td colspan="4" class="ant-table-cell">
+                                  <div class="ant-empty ant-empty-normal">
+                                    <div class="ant-empty-image"><svg class="ant-empty-img-simple" width="64"
+                                        height="41" viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg">
+                                        <g transform="translate(0 1)" fill="none" fill-rule="evenodd">
+                                          <ellipse class="ant-empty-img-simple-ellipse" cx="32" cy="33" rx="32" ry="7">
+                                          </ellipse>
+                                          <g class="ant-empty-img-simple-g" fill-rule="nonzero">
+                                            <path
+                                              d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z">
+                                            </path>
+                                            <path
+                                              d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z"
+                                              class="ant-empty-img-simple-path"></path>
+                                          </g>
+                                        </g>
+                                      </svg></div>
+                                    <div class="ant-empty-description">Não há dados</div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div hidden="">
+          <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
+            <div class="ant-col ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+              <div class="ant-card ant-card-bordered ant-card-hoverable">
+                <div class="ant-card-body">
+                  <div class="ant-card-meta">
+                    <div class="ant-card-meta-avatar"><span class="ant-avatar ant-avatar-circle ant-avatar-icon"><span
+                          role="img" aria-label="audit" class="anticon anticon-audit"><svg viewBox="64 64 896 896"
+                            focusable="false" data-icon="audit" width="1em" height="1em" fill="currentColor"
+                            aria-hidden="true">
+                            <path
+                              d="M296 250c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h384c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H296zm184 144H296c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm-48 458H208V148h560v320c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V108c0-17.7-14.3-32-32-32H168c-17.7 0-32 14.3-32 32v784c0 17.7 14.3 32 32 32h264c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm440-88H728v-36.6c46.3-13.8 80-56.6 80-107.4 0-61.9-50.1-112-112-112s-112 50.1-112 112c0 50.7 33.7 93.6 80 107.4V764H520c-8.8 0-16 7.2-16 16v152c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V780c0-8.8-7.2-16-16-16zM646 620c0-27.6 22.4-50 50-50s50 22.4 50 50-22.4 50-50 50-50-22.4-50-50zm180 266H566v-60h260v60z">
+                            </path>
+                          </svg></span></span></div>
+                    <div class="ant-card-meta-detail">
+                      <div class="ant-card-meta-title">Contratos</div>
+                      <div class="ant-card-meta-description">Cadastre contratos relacionados a este cliente</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ant-col ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+              <div class="ant-card ant-card-bordered ant-card-hoverable">
+                <div class="ant-card-body">
+                  <div class="ant-card-meta">
+                    <div class="ant-card-meta-avatar"><span class="ant-avatar ant-avatar-circle ant-avatar-icon"><span
+                          role="img" aria-label="car" class="anticon anticon-car"><svg viewBox="64 64 896 896"
+                            focusable="false" data-icon="car" width="1em" height="1em" fill="currentColor"
+                            aria-hidden="true">
+                            <path
+                              d="M380 704h264c4.4 0 8-3.6 8-8v-84c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v36H428v-36c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v84c0 4.4 3.6 8 8 8zm340-123a40 40 0 1080 0 40 40 0 10-80 0zm239-167.6L935.3 372a8 8 0 00-10.9-2.9l-50.7 29.6-78.3-216.2a63.9 63.9 0 00-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2-50.8-29.6a8 8 0 00-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40 60.3-35.2a8 8 0 003-10.8zM840 517v237H184V517l15.6-43h624.8l15.6 43zM292.7 218.1l.5-1.3.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220l72.7-199.9zM224 581a40 40 0 1080 0 40 40 0 10-80 0z">
+                            </path>
+                          </svg></span></span></div>
+                    <div class="ant-card-meta-detail">
+                      <div class="ant-card-meta-title">Deslocamentos</div>
+                      <div class="ant-card-meta-description">Cadastre deslocamentos relacionados a esse cliente</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ant-col ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
+              <div class="ant-card ant-card-bordered ant-card-hoverable">
+                <div class="ant-card-body">
+                  <div class="ant-card-meta">
+                    <div class="ant-card-meta-avatar"><span class="ant-avatar ant-avatar-circle ant-avatar-icon"><span
+                          role="img" aria-label="car" class="anticon anticon-car"><svg viewBox="64 64 896 896"
+                            focusable="false" data-icon="car" width="1em" height="1em" fill="currentColor"
+                            aria-hidden="true">
+                            <path
+                              d="M380 704h264c4.4 0 8-3.6 8-8v-84c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v36H428v-36c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v84c0 4.4 3.6 8 8 8zm340-123a40 40 0 1080 0 40 40 0 10-80 0zm239-167.6L935.3 372a8 8 0 00-10.9-2.9l-50.7 29.6-78.3-216.2a63.9 63.9 0 00-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2-50.8-29.6a8 8 0 00-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40 60.3-35.2a8 8 0 003-10.8zM840 517v237H184V517l15.6-43h624.8l15.6 43zM292.7 218.1l.5-1.3.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220l72.7-199.9zM224 581a40 40 0 1080 0 40 40 0 10-80 0z">
+                            </path>
+                          </svg></span></span></div>
+                    <div class="ant-card-meta-detail">
+                      <div class="ant-card-meta-title">Integrações</div>
+                      <div class="ant-card-meta-description">Enviar cadastro do cliente para as integrações</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ant-row ant-row-end ant-row-middle sticky-bottom"
+          style="margin-left: -8px; margin-right: -8px; z-index: 2; row-gap: 0px;">
+          <div class="ant-col" style="padding-left: 8px; padding-right: 8px;">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div></div></div></form>
-<div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 30px;">
-  <div class="ant-col ant-col-md-24" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-table-wrapper">
-  <div class="ant-spin-nested-loading">
-  <div class="ant-spin-container">
-  <div class="ant-table ant-table-small ant-table-empty">
-  <div class="ant-table-title">
-  <div class="ant-row ant-row-space-around" style="margin-left: -6px; margin-right: -6px; padding-top: 10px; padding-right: 10px; padding-left: 10px; row-gap: 0px;">
-  <div class="ant-col ant-col-md-12" style="padding-left: 6px; padding-right: 6px;"><span>Endereços</span></div>
-<div class="ant-col ant-col-md-12" style="padding-left: 6px; padding-right: 6px; text-align: right;"><button type="button" class="ant-btn ant-btn-primary"><span role="img" class="anticon"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z" stroke="currentColor"></path></svg></span><span>Endereço</span></button></div></div></div>
-<div class="ant-table-container">
-  <div class="ant-table-content"><table style="table-layout: auto;"><colgroup><col style="width: 10%;"><col style="width: 18%;"><col style="width: 15%;"><col style="width: 15%;"><col style="width: 15%;"><col><col style="width: 100px;"></colgroup><thead class="ant-table-thead"><tr><th class="ant-table-cell">CEP</th><th class="ant-table-cell">Logradouro</th><th class="ant-table-cell">Bairro</th><th class="ant-table-cell">Cidade</th><th class="ant-table-cell">Estado</th><th class="ant-table-cell">Complemento</th><th class="ant-table-cell text-right"></th></tr></thead><tbody class="ant-table-tbody"><tr class="ant-table-placeholder"><td colspan="7" class="ant-table-cell">
-  <div class="ant-empty ant-empty-normal">
-  <div class="ant-empty-image"><svg class="ant-empty-img-simple" width="64" height="41" viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0 1)" fill="none" fill-rule="evenodd"><ellipse class="ant-empty-img-simple-ellipse" cx="32" cy="33" rx="32" ry="7"></ellipse><g class="ant-empty-img-simple-g" fill-rule="nonzero"><path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"></path><path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" class="ant-empty-img-simple-path"></path></g></g></svg></div>
-  <div class="ant-empty-description">Não há dados</div></div></td></tr></tbody></table></div></div></div></div></div></div></div>
-<div class="ant-col ant-col-md-24" style="padding-left: 8px; padding-right: 8px; margin-bottom: 30px;">
-  <div class="ant-table-wrapper">
-  <div class="ant-spin-nested-loading">
-  <div class="ant-spin-container">
-  <div class="ant-table ant-table-small ant-table-empty">
-  <div class="ant-table-title">
-  <div class="ant-row ant-row-space-around" style="padding-top: 10px; padding-right: 10px; padding-left: 10px; row-gap: 0px;">
-  <div class="ant-col ant-col-md-12"><span>Contatos</span></div>
-<div class="ant-col ant-col-md-12" style="text-align: right;"><button type="button" class="ant-btn ant-btn-primary"><span role="img" class="anticon"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z" stroke="currentColor"></path></svg></span><span>Contato</span></button></div></div></div>
-<div class="ant-table-container">
-  <div class="ant-table-content"><table style="table-layout: auto;"><colgroup><col style="width: 30%;"><col style="width: 35%;"><col style="width: 20%;"><col style="width: 20%;"></colgroup><thead class="ant-table-thead"><tr><th class="ant-table-cell">Nome</th><th class="ant-table-cell">E-mail</th><th class="ant-table-cell">Telefone</th><th class="ant-table-cell">Tipo de contato</th><th class="ant-table-cell text-right"></th></tr></thead><tbody class="ant-table-tbody"><tr class="ant-table-placeholder"><td colspan="5" class="ant-table-cell">
-  <div class="ant-empty ant-empty-normal">
-  <div class="ant-empty-image"><svg class="ant-empty-img-simple" width="64" height="41" viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0 1)" fill="none" fill-rule="evenodd"><ellipse class="ant-empty-img-simple-ellipse" cx="32" cy="33" rx="32" ry="7"></ellipse><g class="ant-empty-img-simple-g" fill-rule="nonzero"><path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"></path><path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" class="ant-empty-img-simple-path"></path></g></g></svg></div>
-  <div class="ant-empty-description">Não há dados</div></div></td></tr></tbody></table></div></div></div></div></div></div></div></div></div>
-<div hidden="">
-  <div class="ant-row" style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
-  <div class="ant-col ant-col-md-8" style="padding-left: 8px; padding-right: 8px;">
-  <div class="ant-card ant-card-bordered ant-card-hoverable">
-  <div class="ant-card-body">
-  <div class="ant-card-meta">
-  <div class="ant-card-meta-avatar"><span class="ant-avatar ant-avatar-circle ant-avatar-icon"><span role="img" aria-label="audit" class="anticon anticon-audit"><svg viewBox="64 64 896 896" focusable="false" data-icon="audit" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M296 250c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h384c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H296zm184 144H296c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm-48 458H208V148h560v320c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V108c0-17.7-14.3-32-32-32H168c-17.7 0-32 14.3-32 32v784c0 17.7 14.3 32 32 32h264c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm440-88H728v-36.6c46.3-13.8 80-56.6 80-107.4 0-61.9-50.1-112-112-112s-112 50.1-112 112c0 50.7 33.7 93.6 80 107.4V764H520c-8.8 0-16 7.2-16 16v152c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V780c0-8.8-7.2-16-16-16zM646 620c0-27.6 22.4-50 50-50s50 22.4 50 50-22.4 50-50 50-50-22.4-50-50zm180 266H566v-60h260v60z"></path></svg></span></span></div>
-<div class="ant-card-meta-detail">
-  <div class="ant-card-meta-title">Contratos</div>
-<div class="ant-card-meta-description">Cadastre contratos relacionados a este cliente</div></div></div></div></div></div><div class="ant-col ant-col-md-8" style="padding-left: 8px; padding-right: 8px;"><div class="ant-card ant-card-bordered ant-card-hoverable"><div class="ant-card-body"><div class="ant-card-meta"><div class="ant-card-meta-avatar"><span class="ant-avatar ant-avatar-circle ant-avatar-icon"><span role="img" aria-label="car" class="anticon anticon-car"><svg viewBox="64 64 896 896" focusable="false" data-icon="car" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M380 704h264c4.4 0 8-3.6 8-8v-84c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v36H428v-36c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v84c0 4.4 3.6 8 8 8zm340-123a40 40 0 1080 0 40 40 0 10-80 0zm239-167.6L935.3 372a8 8 0 00-10.9-2.9l-50.7 29.6-78.3-216.2a63.9 63.9 0 00-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2-50.8-29.6a8 8 0 00-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40 60.3-35.2a8 8 0 003-10.8zM840 517v237H184V517l15.6-43h624.8l15.6 43zM292.7 218.1l.5-1.3.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220l72.7-199.9zM224 581a40 40 0 1080 0 40 40 0 10-80 0z"></path></svg></span></span></div><div class="ant-card-meta-detail"><div class="ant-card-meta-title">Deslocamentos</div><div class="ant-card-meta-description">Cadastre deslocamentos relacionados a esse cliente</div></div></div></div></div></div><div class="ant-col ant-col-md-8" style="padding-left: 8px; padding-right: 8px;"><div class="ant-card ant-card-bordered ant-card-hoverable"><div class="ant-card-body"><div class="ant-card-meta"><div class="ant-card-meta-avatar"><span class="ant-avatar ant-avatar-circle ant-avatar-icon"><span role="img" aria-label="car" class="anticon anticon-car"><svg viewBox="64 64 896 896" focusable="false" data-icon="car" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M380 704h264c4.4 0 8-3.6 8-8v-84c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v36H428v-36c0-4.4-3.6-8-8-8h-40c-4.4 0-8 3.6-8 8v84c0 4.4 3.6 8 8 8zm340-123a40 40 0 1080 0 40 40 0 10-80 0zm239-167.6L935.3 372a8 8 0 00-10.9-2.9l-50.7 29.6-78.3-216.2a63.9 63.9 0 00-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2-50.8-29.6a8 8 0 00-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40 60.3-35.2a8 8 0 003-10.8zM840 517v237H184V517l15.6-43h624.8l15.6 43zM292.7 218.1l.5-1.3.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220l72.7-199.9zM224 581a40 40 0 1080 0 40 40 0 10-80 0z"></path></svg></span></span></div><div class="ant-card-meta-detail"><div class="ant-card-meta-title">Integrações</div><div class="ant-card-meta-description">Enviar cadastro do cliente para as integrações</div></div></div></div></div></div></div></div><div class="ant-row ant-row-end ant-row-middle sticky-bottom" style="margin-left: -8px; margin-right: -8px; z-index: 2; row-gap: 0px;"><div class="ant-col" style="padding-left: 8px; padding-right: 8px;">
-</div></div></div></div></div>
-<button type="button" class="ant-btn ant-btn-primary float-buttom"><span>Próximo</span></button>
+  <button type="button" class="ant-btn ant-btn-primary float-buttom"><span>Próximo</span></button>
 </div>

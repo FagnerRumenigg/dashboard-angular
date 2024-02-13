@@ -25,7 +25,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     new Chart(pieCtx, {
       type: 'pie',
       data: {
-        labels: ['Red', 'Green', 'Blue'],
+        labels: ['Red', 'Blue', 'Yellow'],
         datasets: [{
           label: 'My Pie Chart',
           data: [300, 200, 100],
