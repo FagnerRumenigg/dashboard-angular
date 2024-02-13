@@ -1,20 +1,29 @@
 <nz-layout>
   <nz-sider class="sider-menu" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="sider-menu-content" [class.collapsed]="isCollapsed">
+    <div class="sider-menu-content" [class.collapsed]="isCollapsed" style="overflow-y:auto; max-height:calc(100% - 10px)">
       <a class="a-logo" routerLink="v">
         <div class="sidemenu-logo-default logo-image-fit">
-          <img alt="logo tiflux normal" class="logo" [src]="!isCollapsed ? 'assets/Logo/header_logo.png' : 'assets/Logo/minimized_logo.png'">
+          <img alt="logo tiflux normal" class="logo"
+            [src]="!isCollapsed ? 'assets/Logo/header_logo.png' : 'assets/Logo/minimized_logo.png'">
         </div>
       </a>
       <div style="margin-left: 15px; margin-right: 15px; margin-bottom: 8px;">
         <a class="a-new-ticket">
-          <button type="button" class="ant-btn ant-btn-primary ant-btn-block" ant-click-animating-without-extra-node="false"><span role="img" class="anticon"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z" stroke="currentColor"></path></svg></span>
+          <button type="button" class="ant-btn ant-btn-primary ant-btn-block"
+            ant-click-animating-without-extra-node="false"><span role="img" class="anticon"><svg
+                xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path
+                  d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+                  stroke="currentColor"></path>
+              </svg></span>
             {{!isCollapsed ? 'Abrir novo ticket' : null}}
           </button>
         </a>
       </div>
       <ul class="sider-menu-ul" nz-menu nzTheme="dark" nzMode="inline">
-        <a nz-menu-item class="li-sider-menu" (selectstart)="true" routerLink="v" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <a nz-menu-item class="li-sider-menu" (selectstart)="true" routerLink="v" routerLinkActive="active"
+          ariaCurrentWhenActive="page">
           <span nz-icon>
             <i class="material-icons">dashboard</i>
           </span>
@@ -26,7 +35,8 @@
           </span>
           <span>Tickets</span>
         </a>
-        <a nz-menu-item class="li-sider-menu" routerLink="v/clients" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <a nz-menu-item class="li-sider-menu" routerLink="v/clients" routerLinkActive="active"
+          ariaCurrentWhenActive="page">
           <span nz-icon>
             <i class="material-icons">group</i>
           </span>
@@ -75,11 +85,7 @@
       </ul>
       <!-- <span nz-icon nzType="vertical-right" nzTheme="outline"></span> -->
       <div class="container-minimizar" (click)="isCollapsed = !isCollapsed">
-        <span
-            class="icon-collapse"
-            nz-icon
-            [nzType]="isCollapsed ? 'vertical-left' : 'vertical-right'"
-          >
+        <span class="icon-collapse" nz-icon [nzType]="isCollapsed ? 'vertical-left' : 'vertical-right'">
         </span>
         <span class="text-container-minimizar">
           {{!isCollapsed ? 'Minimizar' : null}}
@@ -88,40 +94,79 @@
     </div>
   </nz-sider>
   <nz-layout>
-    <header class="ant-layout-header site-layout-background-header">
+    <div class="bg-white w-100">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <div class="header-index-right">
+            <div class="header-index-action" style="margin-right: -10px;"><span
+                class="ant-input-group ant-input-group-compact"><span
+                  class="ant-input-affix-wrapper header-input-search search-field"
+                  style="width: 86%; margin-right: 5px;"><input class="ant-input" placeholder="Número do ticket"
+                    pattern="/[0-9]+/" type="text" value=""><span class="ant-input-suffix"><span role="button"
+                      aria-label="close-circle" tabindex="-1"
+                      class="anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon"><svg
+                        viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em"
+                        fill="currentColor" aria-hidden="true">
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z">
+                        </path>
+                      </svg></span></span></span><span role="img" tabindex="-1" class="anticon"
+                  style="font-size: 20px; width: 10%; margin-top: 6px;"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 24 24" width="1em" fill="currentColor">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path
+                      d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                    </path>
+                  </svg></span></span>
+            </div>
+            <div class="header-index-action" style="margin-right: 0px;"><span class="ant-badge"><span role="img"
+                  class="anticon header-index-icons" style="font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg"
+                    height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path
+                      d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.89 0 1.34-1.08.71-1.71L18 16z">
+                    </path>
+                  </svg></span></span>
+            </div>
+            <div class="header-index-action" style="margin-left: -6px;"><span data-testid="avatarTagNotTooltiped"
+                class="ant-avatar ant-avatar-circle"
+                style="width: 30px; height: 30px; line-height: 30px; font-size: 18px; background-color: rgb(254, 80, 0); cursor: pointer; margin-bottom: 8px; margin-top: 8px;"><span
+                  class="ant-avatar-string" style="line-height: 30px; transform: scale(1) translateX(-50%);">A</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="ant-layout-header">
       <!-- <nz-tabset>
         <nz-tab nzTitle="Tab 1"></nz-tab>
         <nz-tab nzTitle="Tab 2"></nz-tab>
         <nz-tab nzTitle="Tab 3"></nz-tab>
       </nz-tabset> -->
       <div class="header-index-left">
-        <div class="tab-menu tab-1" [class]="[tabNameOne ? 'show-div' : 'hidden-div']" [class.active-tab]="activeRoute === tabNameOne">
+        <div class="tab-menu tab-1" [class]="[tabNameOne ? 'show-div' : 'hidden-div']"
+          [class.active-tab]="activeRoute === tabNameOne">
           <div (click)="navigateTo('/v', tabNameOne)">
-            {{ tabNameOne }}
+            <span style="font-size: 10px;">{{ tabNameOne }}</span>
           </div>
-          <div (click)="closeTabAndNavigateTo('1', '/v/clients', tabNameTwo)" class="close-button" [class]="[tabNameTwo ? 'show-div' : 'hidden-div']">
+          <div (click)="closeTabAndNavigateTo('1', '/v/clients', tabNameTwo)" class="close-button"
+            [class]="[tabNameTwo ? 'show-div' : 'hidden-div']">
             <span nz-icon>
               <i class="material-icons">close</i>
             </span>
           </div>
         </div>
-        <div class="tab-menu tab-2" [class]="[tabNameTwo ? 'show-div' : 'hidden-div']" [class.active-tab]="activeRoute === tabNameTwo">
+        <div class="tab-menu tab-2" [class]="[tabNameTwo ? 'show-div' : 'hidden-div']"
+          [class.active-tab]="activeRoute === tabNameTwo">
           <div (click)="navigateTo('/v/clients', tabNameTwo)">
-            {{ tabNameTwo }}
+            <span style="font-size: 10px;">{{ tabNameTwo }}</span>
           </div>
-          <div (click)="closeTabAndNavigateTo('2', '/v', tabNameOne)" class="close-button" [class]="[tabNameOne ? 'show-div' : 'hidden-div']">
+          <div (click)="closeTabAndNavigateTo('2', '/v', tabNameOne)" class="close-button"
+            [class]="[tabNameOne ? 'show-div' : 'hidden-div']">
             <span nz-icon>
               <i class="material-icons">close</i>
             </span>
           </div>
-        </div>
-      </div>
-        <div class="header-index-right">
-          <div class="header-index-action" style="margin-right: -10px;"><span class="ant-input-group ant-input-group-compact"><span class="ant-input-affix-wrapper header-input-search search-field" style="width: 86%; margin-right: 5px;"><input class="ant-input" placeholder="Número do ticket" pattern="/[0-9]+/" type="text" value=""><span class="ant-input-suffix"><span role="button" aria-label="close-circle" tabindex="-1" class="anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon"><svg viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z"></path></svg></span></span></span><span role="img" tabindex="-1" class="anticon" style="font-size: 20px; width: 10%; margin-top: 6px;"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span></span>
-          </div>
-        <div class="header-index-action" style="margin-right: 0px;"><span class="ant-badge"><span role="img" class="anticon header-index-icons" style="font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.89 0 1.34-1.08.71-1.71L18 16z"></path></svg></span></span>
-        </div>
-        <div class="header-index-action" style="margin-left: -6px;"><span data-testid="avatarTagNotTooltiped" class="ant-avatar ant-avatar-circle" style="width: 30px; height: 30px; line-height: 30px; font-size: 18px; background-color: rgb(254, 80, 0); cursor: pointer; margin-bottom: 8px; margin-top: 8px;"><span class="ant-avatar-string" style="line-height: 30px; transform: scale(1) translateX(-50%);">A</span></span>
         </div>
       </div>
     </header>

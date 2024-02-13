@@ -66,6 +66,11 @@ nz-footer {
   width: 1;
 }
 
+.sider-menu{
+  overflow-y: auto;
+  max-height: calc(100% - 50px);
+}
+
 .sider-menu, .sider-menu-ul {
   background: #03363D;
   color: #fff;
