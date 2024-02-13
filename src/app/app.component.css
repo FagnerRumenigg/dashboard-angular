@@ -53,7 +53,6 @@ nz-footer {
 
 .sider-menu-content {
   position: fixed;
-  height: inherit;
   width: 200px;
   transition: width 0.2s ease-in-out;
 }
@@ -72,23 +71,30 @@ nz-footer {
   color: #fff;
 }
 
-.icon-container {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  bottom: 0;
-  width: 100%;
-  height: 48px;
-  padding: 0 20px;
-  border-top: 0.5px solid #1C4A50;
-  color: #fff;
-  font-size: 14px;
-  font-family: 'Be Vietnam Pro', sans-serif;
+.container-minimizar:hover{
   cursor: pointer;
 }
 
+.container-minimizar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  border-top: 0.5px solid #1C4A50;
+}
+
+.text-container-minimizar {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
 .icon-collapse {
-  margin-right: 8px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .li-sider-menu {

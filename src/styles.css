@@ -13,7 +13,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: #0EC4B6;
 }
 
-.ant-btn-primary:hover {
+.ant-btn-primary:hover, .ant-btn-primary:focus {
   border-color: rgb(46, 209, 190);
   background: rgb(46, 209, 190);
 }

@@ -74,14 +74,16 @@
         </a>
       </ul>
       <!-- <span nz-icon nzType="vertical-right" nzTheme="outline"></span> -->
-      <div class="icon-container" (click)="isCollapsed = !isCollapsed">
+      <div class="container-minimizar" (click)="isCollapsed = !isCollapsed">
         <span
             class="icon-collapse"
             nz-icon
             [nzType]="isCollapsed ? 'vertical-left' : 'vertical-right'"
           >
         </span>
-        {{!isCollapsed ? 'Minimizar' : null}}
+        <span class="text-container-minimizar">
+          {{!isCollapsed ? 'Minimizar' : null}}
+        </span>
       </div>
     </div>
   </nz-sider>
