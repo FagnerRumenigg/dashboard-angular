@@ -42,7 +42,7 @@ nz-content {
 }
 
 .inner-content {
-  padding: 24px;
+  /* padding: 24px; */
   background: #fff;
   min-height: 100vh;
 }
@@ -62,9 +62,9 @@ nz-footer {
   transition: width 0.1s ease-in-out;
 }
 
-.ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed {
+/* .ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed {
   width: 1;
-}
+} */
 
 .sider-menu{
   overflow-y: auto;

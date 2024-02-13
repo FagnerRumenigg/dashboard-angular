@@ -17,6 +17,11 @@
   padding: 16px 24px;
 }
 
+.container {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 @media (max-width: 600px) {
   .content {
     display: none;
