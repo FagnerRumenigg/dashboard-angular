@@ -1,6 +1,6 @@
-<nz-layout>
+<nz-layout style="">
   <nz-sider class="sider-menu" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="sider-menu-content" [class.collapsed]="isCollapsed" style="overflow-y:auto; overflow-x:hidden; max-height:calc(100% - 10px)">
+    <div class="sider-menu-content h-100" [class.collapsed]="isCollapsed">
       <a class="a-logo" routerLink="v">
         <div class="sidemenu-logo-default logo-image-fit">
           <img alt="logo tiflux normal" class="logo"
@@ -21,7 +21,8 @@
           </button>
         </a>
       </div>
-      <ul class="sider-menu-ul" nz-menu nzTheme="dark" nzMode="inline">
+      <ul class="sider-menu-ul person-scroll" nz-menu nzTheme="dark" nzMode="inline"
+      style="overflow-y: auto; overflow-x: hidden; max-height: calc(70%-10px);">
         <a nz-menu-item class="li-sider-menu" (selectstart)="true" routerLink="v" routerLinkActive="active"
           ariaCurrentWhenActive="page">
           <span nz-icon>
