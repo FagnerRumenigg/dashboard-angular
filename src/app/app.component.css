@@ -227,7 +227,7 @@ nz-footer {
   width: 3px;
 }
 .person-scroll::-webkit-scrollbar-track{
-  background: #ebe9e9;
+  background: #03363D;
 }
 .person-scroll::-webkit-scrollbar-thumb {
   background-color: #ebe9e9;    
